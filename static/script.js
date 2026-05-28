@@ -1,6 +1,7 @@
 async function analyzeCode() {
 
     const code = document.getElementById("codeInput").value;
+     const language = document.getElementById("language").value;
 
     const resultBox = document.getElementById("result");
 
@@ -11,9 +12,12 @@ async function analyzeCode() {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            code: code
-        })
+      
+
+body: JSON.stringify({
+    code: code,
+    language: language
+})
     });
 
     const data = await response.json();

@@ -7,18 +7,18 @@ load_dotenv()
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 
-def analyze_bug(code):
+def analyze_bug(code, language):
 
-    prompt = f"""
-    You are an expert Python bug fixing AI.
+    prompt =  f"""
+    You are an expert {language} debugging AI.
 
-    Analyze the given code.
+    Analyze the code carefully.
 
-    Give response in this format:
-
-    Bug:
-    Explanation:
-    Fixed Code:
+    Return:
+    1. Error Type
+    2. Root Cause
+    3. Explanation
+    4. Fixed Code
 
     Code:
     {code}

@@ -14,8 +14,9 @@ def analyze():
     data = request.get_json()
 
     code = data.get("code")
+    language = data.get("language")
 
-    result = analyze_bug(code)
+    result = analyze_bug(code, language)
 
     return jsonify({
         "response": result
