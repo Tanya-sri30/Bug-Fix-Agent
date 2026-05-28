@@ -5,7 +5,10 @@ async function analyzeCode() {
 
     const resultBox = document.getElementById("result");
 
-    resultBox.innerText = "Analyzing...";
+    resultBox.innerHTML = `
+    <div class="spinner"></div>
+    <p>Analyzing Code...</p>
+`;
 
     const response = await fetch("/analyze", {
         method: "POST",
