@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bug Fix Agent</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>AI Bug Fix Agent</h1>
+
+        <textarea id="codeInput" placeholder="Paste your buggy code here..."></textarea>
+
+        <button onclick="analyzeCode()">Analyze Bug</button>
+
+        <div class="output">
+            <h2>Result</h2>
+            <pre id="result"></pre>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
